@@ -1,6 +1,10 @@
 import random
 
 def randInt(min=0, max=100):
+    if max < min:
+        return "your high limit is less than your lower limit"
+    elif min < 0:
+        return "the low number cannot be negative"
     num = random.random() * (max - min) + min
     return round(num)
 
